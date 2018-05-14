@@ -28,7 +28,7 @@ startup(){
         echo "jarfile=$jar_path"
         cmd="java $1 -jar $jar_path > ./my-blog.out < /dev/null &"
         echo "cmd: $cmd"
-        java $1 -jar $jar_path > ./my-blog.out < /dev/null &
+        nohup java $1 -jar $jar_path > ./my-blog.out < /dev/null &
         show_log
     fi
 }
